@@ -13,7 +13,7 @@ for example if your first name is `John`,
 ```shell
 git checkout -b john-dev
 ```
-*NOTE*: The default branch for this repository is. You are not allowed to directly push code to this branch **stage** and the **main** branch
+NOTE: The default branch for this repository is. You are not allowed to directly push code to this branch **stage** and the **main** branch
 - Make the chages you would like to make on this branch (dev branch)
 - Ensure the code runs on your local machine
 - Commit your changes
