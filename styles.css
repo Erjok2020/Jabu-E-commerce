@@ -58,7 +58,7 @@
 
 
   #home {
-  background: url('../imgs/sample3.png');
+  background: url('../images/sample3.png');
   background-color: burlywood;
   width: 100%; /* Set the width to occupy the full width of the viewport */
   height: 100vh; /* Set the height to occupy the full viewport height */
@@ -94,4 +94,3 @@ color: coral;
 #home button:hover {
   background-color: #0056b3; /* Change the background color on hover */
 }
-
