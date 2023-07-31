@@ -1,4 +1,4 @@
-# Souq-E-commerce website
+# Souq e-commerce website
 An online shopping platform for refugee fashion designs
 website to create an engaging and visually appealing platform that encourages user interaction and facilitates seamless transaction
 
