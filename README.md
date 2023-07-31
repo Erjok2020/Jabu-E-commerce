@@ -1,5 +1,5 @@
 # SUQ-E-commerce website
-An online shopping platform for the Jabu clothing brand
+An online shopping platform for refugee fashion designs
 website to create an engaging and visually appealing platform that encourages user interaction and facilitates seamless transaction
 
 ## Requirements
