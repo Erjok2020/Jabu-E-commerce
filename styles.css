@@ -93,7 +93,7 @@ color: coral;
 
 /* Style the "Shop Now" button */
 #home button {
-  background-color: #007bff; /* Set the background color */
+  background-color: black; /* Set the background color */
   color: #fff; /* Set the text color */
   padding: 10px 20px; /* Adjust the padding as needed */
   border: none; /* Remove the default button border */
@@ -103,9 +103,29 @@ color: coral;
   transition: background-color 0.3s ease-in-out; /* Add a smooth transition */
 }
 
+
+  #home .my-h5 {
+    font-family: 'Bodoni Moda', serif;
+    font-size: 28px; /* Adjust the font size as needed */
+    font-weight: bold;
+  }
+  
+  #home .my-h1 {
+    font-family: 'Bodoni Moda', serif;
+    font-size: 70px; /* Adjust the font size as needed */
+    font-weight: bold;
+  }
+  
+  #home .my-p {
+    font-family: 'Bodoni Moda', serif;
+    font-size: 24px; /* Adjust the font size as needed */
+    font-weight: bold;
+  }
+
+
 /* Hover effect */
 #home button:hover {
-  background-color: #0056b3; /* Change the background color on hover */
+  background-color: #007bff; /* Change the background color on hover */
 }
 
 
@@ -237,3 +257,54 @@ width: 100%;
 .buy-btn:active {
   background-color: #003d80; /* Change the background color when the button is clicked */
 }
+
+
+/* Styling for the small image group */
+.small-img-group {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+/* Styling for each small image column */
+.small-img-col {
+    flex: 1;
+    margin-right: 5px;
+}
+
+/* Styling for small images */
+.small-img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+/*cart*/
+.cart table{
+  width: 100%;
+  border-collapse: collapse ;
+
+}
+
+  
+  .cart .product-info{
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .cart th{
+    text-align: left;
+    padding: 5px 10px ;
+    color: white;
+    background-color: #ff6600;
+  }
+
+  .cart td img{
+    width: 80px;
+    height: 80px;
+    margin-right: 10px;
+  }
+
+
+  
