@@ -1,0 +1,135 @@
+<style>
+    #home .my-h5 {
+      font-family: 'Bodoni Moda', serif;
+      font-size: 28px; /* Adjust the font size as needed */
+      font-weight: bold;
+    }
+    
+    #home .my-h1 {
+      font-family: 'Bodoni Moda', serif;
+      font-size: 70px; /* Adjust the font size as needed */
+      font-weight: bold;
+    }
+    
+    #home .my-p {
+      font-family: 'Bodoni Moda', serif;
+      font-size: 24px; /* Adjust the font size as needed */
+      font-weight: bold;
+    }
+  </style>
+
+
+   <!--navigation-->
+   <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Navbar</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <!-- Bootstrap JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-white py-3 fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="#">
+      <img src="images/souq4.jpg" alt="Logo">
+    </a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="shop.html">Shop</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Blog</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contact us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="cart.html">Cart</a>
+        </li>
+      </ul>
+
+      <div class="cart-icon">
+        <i class="fas fa-shopping-bag"></i> <!-- This adds the cart icon -->
+        <i class="fas fa-shopping-cart"></i>
+      </div>
+
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"> <a href="cart.html" class="btn btn-primary">Buy Now</a>
+      </form>
+    </div>
+  </div>
+</nav>
+
+</body>
+</html>
+
+
+<!--end of navigation-->
+
+<!--js for cart.html-->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+
+
+<script>
+  $(document).ready(function(){
+    $(".navbar-nav li a").click(function(event) {
+      $(".navbar-collapse").collapse('hide');
+    });
+
+    // Add to Cart functionality
+    $(".add-to-cart").click(function() {
+      var productName = $(this).closest("tr").find(".product-info p").text();
+      var productPrice = parseFloat($(this).closest("tr").find(".product-price").text());
+      var quantity = parseInt($(this).closest("tr").find(".quantity").val());
+      var subtotal = productPrice * quantity;
+      var cartItem = "<div class='cart-item'>" + productName + " - $" + productPrice.toFixed(2) + " x " + quantity + " = $" + subtotal.toFixed(2) + "</div>";
+      
+      $(".cart-items").append(cartItem);
+      
+      var currentTotal = parseFloat($("#totalAmount").text().replace("$", ""));
+      var newTotal = currentTotal + subtotal;
+      $("#totalAmount").text("$" + newTotal.toFixed(2));
+    });
+
+    // Checkout functionality
+    $(".checkout-btn").click(function() {
+      // Your checkout logic here
+      alert("Checkout functionality is not implemented yet.");
+    });
+  });
+
+   // Get the Checkout button element
+  const checkoutButton = document.querySelector('.checkout-btn');
+
+  // Add click event listener to the Checkout button
+  checkoutButton.addEventListener('click', function() {
+    // Redirect users to the checkout.html page
+    window.location.href = 'checkout.html';
+  });
+
+  checkoutBtn.addEventListener('click', function() {
+    console.log('Checkout button clicked');
+    // window.location.href = 'checkout.html'; // Comment out the redirect for testing
+  });
+  
+</script>

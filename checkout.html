@@ -1,0 +1,184 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Navbar</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <!-- Bootstrap JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+
+<!-- Navbar here -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white py-3 fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="#">
+      <img src="images/souq4.jpg" alt="Logo">
+    </a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="shop.html">Shop</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Blog</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contact us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="cart.html">Cart</a>
+        </li>
+      </ul>
+
+      <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+
+
+<section class="my-5 pt-5"></section>
+
+<section class="checkout container my-5 py-5">
+    <div class="container mt-5">
+        <h2 class="font-weight-bold"> Checkout</h2>
+        <hr>
+    </div>
+
+    <form id="checkout-form" action="checkout_process.php" method="POST">
+    <div class="form-group">
+        <label for="fullName">Full Name</label>
+        <input type="text" class="form-control" id="fullName" name="fullName" required>
+    </div>
+    <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" class="form-control" id="email" name="email" required>
+    </div>
+    <div class="form-group">
+        <label for="address">Address</label>
+        <input type="text" class="form-control" id="address" name="address" required>
+    </div>
+    <div class="form-group">
+        <label for="phone">Phone</label>
+        <input type="tel" class="form-control" id="phone" name="phone" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Place Order</button>
+</form>
+
+</section>
+
+<!-- Footer -->
+<footer class="mt-5 py-5 bg-dark text-white">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4 col-md-6">
+        <h4>About Us</h4>
+        <p>We are an online E-Commerce dedicated to improving business in a refugee landscape </p>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <h4>Contact Information</h4>
+        <p>Email: SouqMarket@gmail.com</p>
+        <p>Phone: +254721632511</p>
+        <p>Address: Kakuma, Kenya</p>
+      </div>
+      <div class="col-lg-4">
+        <h4>Follow Us</h4>
+        <ul class="list-inline">
+          <li class="list-inline-item"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+          <li class="list-inline-item"><a href="#"><i class="fab fa-twitter"></i></a></li>
+          <li class="list-inline-item"><a href="#"><i class="fab fa-instagram"></i></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+
+ <!-- Bootstrap JavaScript Bundle with Popper -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-1eGFRMuh5PmdIe1BX9TKhWq8r21YLC2h+pbJlzKh/J5Gz+IehO23SJsre4T2rsM3" crossorigin="anonymous"></script>
+
+<!-- Custom JavaScript -->
+<script>document.addEventListener('DOMContentLoaded', function() {
+  const checkoutForm = document.getElementById('checkout-form');
+
+  checkoutForm.addEventListener('submit', function(event) {
+    event.preventDefault();
+    const fullName = document.getElementById('fullName').value;
+    const email = document.getElementById('email').value;
+    const address = document.getElementById('address').value;
+    const phone = document.getElementById('phone').value;
+
+    // Display loading message
+    const loadingMessage = document.createElement('p');
+    loadingMessage.textContent = 'Processing your order...';
+    checkoutForm.appendChild(loadingMessage);
+
+    // Simulate order processing
+    setTimeout(function() {
+      // Remove loading message
+      loadingMessage.remove();
+
+      // Simulate payment verification
+      setTimeout(function() {
+        // Simulate order fulfillment
+        setTimeout(function() {
+          // Simulate order tracking
+          alert('Your order has been successfully placed!\n\nOrder Details:\nFull Name: ' + fullName + '\nEmail: ' + email + '\nAddress: ' + address + '\nPhone: ' + phone);
+        }, 2000);
+      }, 2000);
+    }, 2000);
+  });
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+  const checkoutForm = document.getElementById('checkout-form');
+
+  checkoutForm.addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent form submission
+
+    // Retrieve form input values
+    const fullName = document.getElementById('fullName').value;
+    const email = document.getElementById('email').value;
+    const address = document.getElementById('address').value;
+    const phone = document.getElementById('phone').value;
+
+    // Display loading message
+    console.log('Processing your order...');
+
+    // Simulate order processing
+    setTimeout(function() {
+      // Simulate payment verification
+      setTimeout(function() {
+        // Simulate order fulfillment
+        setTimeout(function() {
+          // Simulate order tracking
+          console.log('Your order has been successfully placed!\n\nOrder Details:\nFull Name: ' + fullName + '\nEmail: ' + email + '\nAddress: ' + address + '\nPhone: ' + phone);
+        }, 2000);
+      }, 2000);
+    }, 2000);
+  });
+});
+</script>
+<!-- End of Custom JavaScript -->
+
+</body>
+</html>
