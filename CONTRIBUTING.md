@@ -3,7 +3,7 @@ Thank you for your time to contribute for this repository. Read through the foll
 
 - To clone this repository to your local machine, run
 ```shell
-git clone https://github.com/erjok2020/Jabu-E-commerce.git
+https://github.com/Erjok2020/Souq-e-commerce.git
 ```
 - Create a new branch in your local machine preferebly with the your first name as prefix and the word **dev** following it.
 ```shell
