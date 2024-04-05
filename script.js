@@ -32,7 +32,7 @@ function initializeCart() {
   updateCartTotal();
 }
 
-// Call initializeCart function when the page loads
+// Call the  initializeCart function when the page loads
 window.onload = initializeCart;
 
  // Select all the social media links
